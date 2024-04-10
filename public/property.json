@@ -1,0 +1,81 @@
+[
+    {
+      "id":"1",
+      "estate_title": "Cozy Single-Family Home",
+      "segment_name": "Residential",
+      "description": "Charming single-family home with spacious backyard and modern amenities.",
+      "price": "$350,000",
+      "status": "Sale",
+      "area": "1800 sq ft",
+      "location": "Suburban neighborhood, Springfield",
+      "facilities": ["3 bedrooms", "2 bathrooms", "Living room", "Kitchen"],
+      "image": "https://i.postimg.cc/cJmbMNxg/Cozy-Single-Family-Home.jpg"
+      
+    },
+    {
+      "id":"2",
+      "estate_title": "Luxury Townhouse",
+      "segment_name": "Residential",
+      "description": "Elegant townhouse featuring high-end finishes and rooftop terrace.",
+      "price": "$600,000",
+      "status": "Sale",
+      "area": "2500 sq ft",
+      "location": "Downtown, Metro City",
+      "facilities": ["4 bedrooms", "3.5 bathrooms", "Spa", "Gym", "Garage"],
+      "image": "https://i.postimg.cc/TYDNNb2X/luxury-apartment.jpg"
+      
+    },
+    {
+      "id":"3",
+      "estate_title": "Modern Apartment",
+      "segment_name": "Residential",
+      "description": "Sleek apartment with panoramic views and upscale amenities.",
+      "price": "$2,500/month",
+      "status": "Rent",
+      "area": "1200 sq ft",
+      "location": "City Center, Downtown",
+      "facilities": ["2 bedrooms", "2 bathrooms", "Balcony", "Gourmet Kitchen"],
+      "image": "https://i.postimg.cc/3r6bZ1TB/Modern-Apartment.jpg"
+      
+    },
+    {
+      "id":"4",
+      "estate_title": "Student Housing Complex",
+      "segment_name": "Student Housing",
+      "description": "Modern student housing community with study lounges and fitness center.",
+      "price": "$800/month (per bed)",
+      "status": "Rent",
+      "area": "Shared",
+      "location": "Near University Campus",
+      "facilities": ["Furnished rooms", "Study rooms", "Fitness center", "Laundry facilities"],
+      "image": "https://i.postimg.cc/43J83F6J/Student-Housing-Complex.jpg"
+      
+    },
+    {
+      "id": 5,
+      "estate_title": "Senior Living Community",
+      "segment_name": "Residential",
+      "description": "A peaceful community tailored for seniors.",
+      "price": "$3,500/month",
+      "status": "rent",
+      "area": "1500 sq ft",
+      "location": "2468 Oak Lane, City, State",
+      "facilities": ["community center", "gardens", "assisted living services"],
+      "image": "https://i.postimg.cc/5yyP5Ppw/Senior-Living-Community.jpg"
+      
+    },
+    {
+      "id": 6,
+      "estate_title": "Beachfront Vacation Rental",
+      "segment_name": "Residential",
+      "description": "A stunning vacation home with ocean views.",
+      "price": "$300/night",
+      "status": "rent",
+      "area": "1800 sq ft",
+      "location": "123 Beachside Avenue, City, State",
+      "facilities": ["beach access", "private patio", "BBQ grill"],
+      "image": "https://i.postimg.cc/Bb3SXKg9/Beachfront-Vacation-Rental.jpg"
+      
+    }
+  ]
+  
