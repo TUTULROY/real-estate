@@ -14,7 +14,7 @@ import 'swiper/css/scrollbar';
 
 const Banner = () => {
     return (
-            <div className='max-w-6xl'>
+            // <div className='max-w-6xl'>
         <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -27,20 +27,20 @@ const Banner = () => {
         onSlideChange={() => console.log('slide change')}
       >
         <SwiperSlide>
-            <img className='' src={slide4} alt="" />
+            <img  src={slide4} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-            <img src={slide1} alt="" />
+            <img className='max-w-5xl' src={slide1} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-            <img src={slide2} alt="" />
+            <img className='max-w-5xl' src={slide2} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-            <img src={slide3} alt="" />
+            <img className='max-w-5xl' src={slide3} alt="" />
         </SwiperSlide>
        
       </Swiper>
-      </div>
+    //   </div>
     );
 };
 

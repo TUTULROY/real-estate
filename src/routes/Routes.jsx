@@ -5,6 +5,7 @@ import Login from "../Login/Login";
 import Register from "../Register/Register";
 
 import ViewProperty from "../ViewProperty/ViewProperty";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 
@@ -12,19 +13,22 @@ import ViewProperty from "../ViewProperty/ViewProperty";
   const router = createBrowserRouter([
 
         {
-            path:'/',
+            path:"/",
             element:<Root></Root>,
             children:[
                 {
-                    path:"/",
+                    path:'/',
                     element:<Home></Home>,
-                    loader: () => fetch('property.json')
+                    loader: () => fetch('/property.json')
 
                 },
 
                 {
                     path:'/property/:id',
-                    element:<ViewProperty></ViewProperty>,
+                    element:<PrivateRoute>
+                        <ViewProperty></ViewProperty>
+                    </PrivateRoute>,
+                    
                     loader:() => fetch('../property.json')
                    
                     

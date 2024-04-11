@@ -1,7 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
-import NavBar from "../NavBar/NavBar";
+
 import Propertys from "../Propertys/Propertys";
+
 
 
 
@@ -9,8 +10,11 @@ const Home = () => {
     const property = useLoaderData();
     return (
         <div>
-            <NavBar></NavBar>
+            <div className="mt-7">
             <Banner></Banner>
+            </div>
+           
+            
             <div className="grid grid-cols-2 mx-auto">
 
                 {
@@ -22,6 +26,7 @@ const Home = () => {
                     ></Propertys> )
                 }
             </div>
+            {/* <Outlet></Outlet> */}
         </div>
     );
 };
