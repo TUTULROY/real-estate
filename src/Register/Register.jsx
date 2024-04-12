@@ -1,13 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
-
-import { useContext } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
 
 const Register = () => {
 
     const {createUser, updateUserProfile}  = useContext(AuthContext);
-
+    const [showPassword, setShowPassword] = useState(false);
 
     const {
         register,
@@ -33,27 +33,7 @@ const Register = () => {
         })
       }
 
-    // const handleRegister = e =>{
-    //     e.preventDefault();
-        
-    //     console.log(e.currentTarget);
-    //     const form = new FormData(e.currentTarget);
-    //     const name = form.get('name');
-    //     const photo = form.get('photo');
-    //     const email = form.get('email');
-    //     const password = form.get('password');
-    //     console.log(name, photo, email, password);
-
-
-    //     createUser(email, password)
-    //     .then(result =>{
-    //         console.log(result.user)
-    //     })
-    //     .catch(error =>{
-    //         console.error(error)
-    //     })
-
-    // }
+   
     return (
 
         <div>
@@ -90,10 +70,26 @@ const Register = () => {
         <label className="label">
           <span className="label-text">Password</span>
         </label>
-        <input type="password" name="password" placeholder="Password" className="input input-bordered" 
-        {...register("password", { required: true })}
+        <div className=" relative">
+        <input type={showPassword ? "text" : "password" } name="password" placeholder="Password" className="w-full input input-bordered" 
+        {...register("password", {
+          required: true,
+          minLength: 6,
+          pattern: {
+              value: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
+              
+          },
+          })}
         />
-        {errors.password && <span>This field is required</span>}
+        {errors.password && <span>Password must contain at least one uppercase letter, one lowercase letter, and be at least 6 characters long</span>}
+
+        <span className="absolute top-4 right-2" onClick={() => setShowPassword(!showPassword)}>
+                    {
+                        showPassword ? <FaEyeSlash />  : <FaEye />
+                    }
+                </span>
+
+        </div>
         <label className="label">
           <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
         </label>

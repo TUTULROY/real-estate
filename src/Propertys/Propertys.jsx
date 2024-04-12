@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import PropTypes from 'prop-types';
 
 const Propertys = ({property}) => {
 
@@ -7,6 +7,7 @@ const Propertys = ({property}) => {
 
     return (
         <div className="">
+          
            <div className=" bg-base-100 shadow-xl">
   <figure className="px-10 pt-10">
     <img src={image} alt="Shoes" className="rounded-xl" />
@@ -28,3 +29,7 @@ const Propertys = ({property}) => {
 };
 
 export default Propertys;
+
+Propertys.propTypes ={
+  property: PropTypes.node
+}

@@ -1,10 +1,15 @@
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import slide1 from '../assets/slide1.jpg'
-import slide2 from '../assets/slide2.jpg'
-import slide3 from '../assets/slide3.jpg'
-import slide4 from '../assets/slide4.jpg'
+
+
+
+
+import slide5 from '../assets/slide5.jpg'
+import slide6 from '../assets/slide6.jpg'
+import slide7 from '../assets/slide7.jpg'
+import slide8 from '../assets/slide8.jpg'
+
 
 // Import Swiper styles
 import 'swiper/css';
@@ -27,16 +32,16 @@ const Banner = () => {
         onSlideChange={() => console.log('slide change')}
       >
         <SwiperSlide>
-            <img  src={slide4} alt="" />
+            <img  src={slide7} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-            <img className='max-w-5xl' src={slide1} alt="" />
+            <img  src={slide5} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-            <img className='max-w-5xl' src={slide2} alt="" />
+            <img  src={slide6} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-            <img className='max-w-5xl' src={slide3} alt="" />
+            <img  src={slide8} alt="" />
         </SwiperSlide>
        
       </Swiper>

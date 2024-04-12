@@ -1,5 +1,8 @@
 import useAuth from "../hooks/useAuth";
 import {Navigate , useLocation} from "react-router-dom";
+import PropTypes from 'prop-types';
+
+import 'animate.css';
 
 const PrivateRoute = ({children}) => {
 
@@ -7,7 +10,7 @@ const PrivateRoute = ({children}) => {
     const location = useLocation()
 
     if(loading){
-        return <h2 className="text-4xl">loading</h2>;
+        return <h2 className="text-4xl animate__slower"></h2>;
     }
 
     if(!user){
@@ -24,3 +27,6 @@ const PrivateRoute = ({children}) => {
 };
 
 export default PrivateRoute;
+PrivateRoute.propTypes ={
+    children: PropTypes.node
+}
