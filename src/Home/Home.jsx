@@ -7,6 +7,7 @@ import 'animate.css';
 
 
 
+
 const Home = () => {
     const property = useLoaderData();
     return (
@@ -15,6 +16,9 @@ const Home = () => {
             <Banner></Banner>
             
             </div>
+            <div>
+                <h2 className="text-2xl text-center">viewDetails</h2>
+                </div>
             
             
             <div className="lg:grid grid-cols-2 mx-auto animate__animated animate__swing animate__delay-5s">
@@ -28,6 +32,7 @@ const Home = () => {
                     ></Propertys> )
                 }
             </div>
+           
             {/* <Outlet></Outlet> */}
         </div>
     );

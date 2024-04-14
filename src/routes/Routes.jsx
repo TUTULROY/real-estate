@@ -6,6 +6,9 @@ import Register from "../Register/Register";
 
 import ViewProperty from "../ViewProperty/ViewProperty";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import UpdateProfile from "../UpdateProfile/UpdateProfile";
+import ErrorPage from "../ErrorPage/ErrorPage";
+import UserProfile from "../UserProfile/UserProfile";
 
 
 
@@ -15,6 +18,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
         {
             path:"/",
             element:<Root></Root>,
+            errorElement:<ErrorPage></ErrorPage>,
             children:[
                 {
                     path:'/',
@@ -29,8 +33,13 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
                         <ViewProperty></ViewProperty>
                     </PrivateRoute>,
                     
-                    loader:() => fetch('../property.json')
-                   
+                    loader:() => fetch('../property.json')               
+                },
+                {
+                    path:"/update",
+                    element:<PrivateRoute>
+                        <UpdateProfile></UpdateProfile>
+                    </PrivateRoute>
                     
                 },
                 {
@@ -40,6 +49,12 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
                 {
                     path:"/register",
                     element:<Register></Register>
+                },
+                {
+                    path:'/user-info',
+                    element:<PrivateRoute>
+                        <UserProfile></UserProfile>
+                    </PrivateRoute>
                 }
                 
 

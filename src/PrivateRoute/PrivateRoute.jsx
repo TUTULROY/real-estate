@@ -10,7 +10,9 @@ const PrivateRoute = ({children}) => {
     const location = useLocation()
 
     if(loading){
-        return <h2 className="text-4xl animate__slower"></h2>;
+        return <h2 className="text-4xl animate__slower">
+            <span className="loading loading-infinity loading-lg"></span>
+        </h2>;
     }
 
     if(!user){

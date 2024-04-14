@@ -52,7 +52,7 @@
       
     },
     {
-      "id": 5,
+      "id": "5",
       "estate_title": "Senior Living Community",
       "segment_name": "Residential",
       "description": "A peaceful community tailored for seniors.",
@@ -63,9 +63,9 @@
       "facilities": ["community center", "gardens", "assisted living services"],
       "image": "https://i.postimg.cc/5yyP5Ppw/Senior-Living-Community.jpg"
       
-    },
+    },      
     {
-      "id": 6,
+      "id": "6",
       "estate_title": "Beachfront Vacation Rental",
       "segment_name": "Residential",
       "description": "A stunning vacation home with ocean views.",

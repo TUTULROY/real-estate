@@ -15,6 +15,7 @@ const {user, logOut} = useContext(AuthContext);
     <li><NavLink to='/about'>About</NavLink></li>
     <li><NavLink to='/update'>Update Profile</NavLink></li>
     <li><NavLink to='/login'>Login</NavLink></li>
+    <li><NavLink to='/user-info'>User Info</NavLink></li>
         
     </>
     return (
