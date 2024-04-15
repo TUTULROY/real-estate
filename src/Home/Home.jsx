@@ -1,8 +1,10 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 
 import Propertys from "../Propertys/Propertys";
 import 'animate.css';
+import Marquee from "react-fast-marquee";
+
 
 
 
@@ -11,13 +13,20 @@ import 'animate.css';
 const Home = () => {
     const property = useLoaderData();
     return (
+        
         <div>
+             
             <div className="mt-7 animate__animated animate__swing animate__delay-2s">
             <Banner></Banner>
             
             </div>
             <div>
-                <h2 className="text-2xl my-9 text-center">ViewDetails</h2>
+                <h2 className="text-2xl my-9 text-center font-bold">View Property Details</h2>
+                <Marquee pauseOnHover={true} speed={100}>
+        <Link className="mr-12" to="/"></Link>
+        <Link className="mr-12" to="/"></Link>
+        <Link className="mr-12" to="/"></Link>
+        </Marquee>
                 </div>
             
             
@@ -33,7 +42,7 @@ const Home = () => {
                 }
             </div>
            
-            {/* <Outlet></Outlet> */}
+            
         </div>
     );
 };

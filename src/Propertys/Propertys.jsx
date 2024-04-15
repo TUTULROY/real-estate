@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
-
+import Marquee from "react-fast-marquee";
 const Propertys = ({property}) => {
 
     const {id, estate_title, description, image, price} = property;
@@ -15,10 +15,15 @@ const Propertys = ({property}) => {
   <div className="card-body items-center text-center">
     <h2 className="card-title">{estate_title}</h2>
     <p>{description}</p>
-    <p>Price:  {price}</p>
+    
+            <Marquee pauseOnHover={true} speed={100}>
+        <Link className="mr-12" to="/">Price:{price}</Link>
+        <Link className="mr-12" to="/">Price:{price}</Link>
+        <Link className="mr-12" to="/">Price:{price}</Link>
+        </Marquee>
     <div className="card-actions">
         <Link to={`/property/${id}`}>
-        <button className="btn btn-primary">View Property</button>
+        <button className="btn btn-active btn-secondary">View Property</button>
         </Link>
       
     </div>

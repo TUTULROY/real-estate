@@ -9,6 +9,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import UpdateProfile from "../UpdateProfile/UpdateProfile";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import UserProfile from "../UserProfile/UserProfile";
+import Agent from "../Agent/Agent";
 
 
 
@@ -55,6 +56,13 @@ import UserProfile from "../UserProfile/UserProfile";
                     element:<PrivateRoute>
                         <UserProfile></UserProfile>
                     </PrivateRoute>
+                },
+                {
+                    path:'/agent',
+                    element:<PrivateRoute>
+                        <Agent></Agent>
+                    </PrivateRoute>,
+                    loader:() =>fetch('/agent.json')
                 }
                 
 

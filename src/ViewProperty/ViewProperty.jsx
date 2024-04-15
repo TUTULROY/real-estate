@@ -5,6 +5,8 @@ const ViewProperty = () => {
     const {id} = useParams();
     const propertys = useLoaderData();
     const property = propertys.find(property => property.id === id)
+
+    
     return (
         <div>
             <h2 className="text-center text-2xl font-semibold my-5">View Property</h2>

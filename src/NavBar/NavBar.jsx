@@ -13,7 +13,7 @@ const {user, logOut} = useContext(AuthContext);
     const navLinks = <>
     
     <li><NavLink to='/'>Home</NavLink></li>
-    <li><NavLink to='/about'>About</NavLink></li>
+    <li><NavLink to='/agent'>Agent</NavLink></li>
     <li><NavLink to='/update'>Update Profile</NavLink></li>
     <li><NavLink to='/login'>Login</NavLink></li>
     <li><NavLink to='/user-info'>User Info</NavLink></li>
@@ -33,7 +33,7 @@ const {user, logOut} = useContext(AuthContext);
       </ul>
     </div>
     <Link to='/'  className="btn btn-ghost text-xl">
-      <span className="text-green-500 font-extrabold">T.R</span> <span className="text-white font-bold">Estate</span>
+      <span className="text-green-500 font-extrabold">T.R</span> <span className="text-slate-500 font-bold">Estate</span>
       </Link> 
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -46,9 +46,9 @@ const {user, logOut} = useContext(AuthContext);
   <div className="navbar-end">
     
     {
-    user? <div className="dropdown dropdown-end">
+    user? <div className="dropdown dropdown-end tooltip tooltip-left" data-tip={user.displayName}>
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-  <div className="w-10 rounded-full">
+  <div className="w-10 rounded-full ">
     <img src={user?.photoURL || "https://i.postimg.cc/5N1C1vBJ/Tutul-roy.jpg" } />
   </div>
 </label>

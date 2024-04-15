@@ -4,19 +4,19 @@ import useAuth from "../hooks/useAuth";
 import { useForm } from "react-hook-form";
 
 const UpdateProfile = () => {
-    const { currentUser, updateUserProfile } = useAuth();
+    const { user, updateUserProfile, setLoading } = useAuth();
     const navigate = useNavigate();
 
     const { register, handleSubmit, setValue } = useForm();
-    const form ="/";
+    const form ="/update";
 
     useEffect(() => {
         
-        if (currentUser) {
-            setValue("fullName", currentUser.displayName);
-            setValue("image", currentUser.photoURL);
+        if (user) {
+            setValue("fullName", user.displayName);
+            setValue("image", user.photoURL);
         }
-    }, [currentUser, setValue]);
+    }, [user, setValue]);
 
     const onSubmit = (data) => {
         const { fullName, image } = data;
@@ -24,7 +24,7 @@ const UpdateProfile = () => {
         
         updateUserProfile(fullName, image)
             .then(() => {
-               
+               setLoading(true)
                 navigate(form);
             })
             .catch(error => {

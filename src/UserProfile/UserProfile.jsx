@@ -4,11 +4,12 @@ import useAuth from "../hooks/useAuth";
 
 const UserProfile = () => {
     const { user } = useAuth();
-    console.log(user);
+   
     
 
     return (
         <div className="text-center" >
+          
             <h2 className="text-2xl my-10 ">Profile Information</h2>
            
                 <form className="card-body md:w-3/4 lg:w-1/2 mx-auto">
@@ -56,6 +57,7 @@ const UserProfile = () => {
   
            
         </div>
+        
     );
 };
 

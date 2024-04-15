@@ -1,0 +1,51 @@
+[
+    {
+        "id":"1",
+      "agent_name": "John Smith",
+      "type":"Cozy Single-Family Home",
+      "image":"https://i.postimg.cc/hvxrgsCk/agent.jpg",
+      "email": "john.smith@example.com",
+      "phone": "+1234567890"
+    },
+    {
+        "id":"2",
+        "type":"Beachfront Vacation Rental",
+        "image":"https://i.postimg.cc/Vvyq7MYD/agent2.jpg",
+      "agent_name": "Emily Johnson",
+      "email": "emily.johnson@example.com",
+      "phone": "+1987654321"
+    },
+    {
+        "id":"3",
+        "type":"Student Housing Complex",
+        "image":"https://i.postimg.cc/8PNWjTsJ/agent3.jpg",
+      "agent_name": "Michael Brown",
+      "email": "michael.brown@example.com",
+      "phone": "+1122334455"
+    },
+    {
+        "id":"4",
+        "type":"Senior Living Community",
+        "image":"https://i.postimg.cc/FRbz4JyP/agent-4jpg.jpg",
+      "agent_name": "Sarah Miller",
+      "email": "sarah.miller@example.com",
+      "phone": "+1555666777"
+    },
+    {
+        "id":"5",
+        "type":"Luxury Townhouse",
+        "image":"https://i.postimg.cc/7Zt3TjT3/agent5.jpg",
+      "agent_name": "David Wilson",
+      "email": "david.wilson@example.com",
+        "phone": "+1444333222"
+    },
+    {
+        "id":"6",
+        "type":"Modern Apartment",
+        "image":"https://i.postimg.cc/WbzN9yHY/agent6.jpg",
+      "agent_name": "Jessica Taylor",
+      "email": "jessica.taylor@example.com",
+        "phone": "+1666777888"
+    }
+  ]
+  
