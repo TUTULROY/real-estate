@@ -1,23 +1,16 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
-import { useForm } from "react-hook-form";
+
 
 const UserProfile = () => {
-    const { currentUser } = useAuth();
-    const { register } = useForm();
-    const [userData, setUserData] = useState(null);
-
-    useEffect(() => {
-        if (currentUser) {
-            const { displayName, email, photoURL } = currentUser;
-            setUserData({ displayName, email, photoURL });
-        }
-    }, [currentUser, setUserData]);
+    const { user } = useAuth();
+    console.log(user);
+    
 
     return (
-        <div>
-            <h2 className="text-2xl my-10 text-center">Profile Information</h2>
-            {userData && (
+        <div className="text-center" >
+            <h2 className="text-2xl my-10 ">Profile Information</h2>
+           
                 <form className="card-body md:w-3/4 lg:w-1/2 mx-auto">
                     <div className="form-control">
                         <label className="label">
@@ -26,10 +19,10 @@ const UserProfile = () => {
                         <input
                             type="text"
                             name="name"
-                            value={userData.displayName}
+                            value={user?.displayName}
                             className="input input-bordered"
                             readOnly
-                            {...register("fullName", { required: true })}
+                          
                         />
                     </div>
                     <div className="form-control">
@@ -39,10 +32,10 @@ const UserProfile = () => {
                         <input
                             type="email"
                             name="email"
-                            value={userData.email}
+                            value={user?.email}
                             className="input input-bordered"
                             readOnly
-                            {...register("email", { required: true })}
+                            
                         />
                     </div>
                     <div className="form-control">
@@ -52,14 +45,16 @@ const UserProfile = () => {
                         <input
                             type="text"
                             name="photoURL"
-                            value={userData.photoURL}
+                            value={user?.photoURL}
                             className="input input-bordered"
                             readOnly
-                            {...register("image", { required: true })}
+                            
                         />
                     </div>
                 </form>
-            )}
+             
+  
+           
         </div>
     );
 };

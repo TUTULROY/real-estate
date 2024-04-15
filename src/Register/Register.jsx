@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
 
+
 const Register = () => {
 
     const {createUser, updateUserProfile}  = useContext(AuthContext);
@@ -27,6 +28,7 @@ const Register = () => {
         .then(() =>{
             updateUserProfile(fullName, image)
             .then(() =>{
+              
                 navigate(from);
             })      
             
@@ -98,8 +100,10 @@ const Register = () => {
         <button className="btn btn-primary">Register</button>
       </div>
     </form>
+    
     <p className="text-center mt-2">Already have an account <Link className="text-blue-500  font-bold" to="/login">Login</Link></p>
 </div>
+
   </div>
 
     );

@@ -17,7 +17,7 @@ const Home = () => {
             
             </div>
             <div>
-                <h2 className="text-2xl text-center">viewDetails</h2>
+                <h2 className="text-2xl my-9 text-center">ViewDetails</h2>
                 </div>
             
             
