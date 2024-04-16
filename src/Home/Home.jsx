@@ -4,6 +4,7 @@ import Banner from "../Banner/Banner";
 import Propertys from "../Propertys/Propertys";
 import 'animate.css';
 import Marquee from "react-fast-marquee";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -15,7 +16,10 @@ const Home = () => {
     return (
         
         <div>
-             
+            <Helmet>
+        <title>T.R Estate || Home</title>
+        
+      </Helmet>
             <div className="mt-7 animate__animated animate__swing animate__delay-2s">
             <Banner></Banner>
             
@@ -23,9 +27,9 @@ const Home = () => {
             <div>
                 <h2 className="text-2xl my-9 text-center font-bold">View Property Details</h2>
                 <Marquee pauseOnHover={true} speed={100}>
-        <Link className="mr-12" to="/"></Link>
-        <Link className="mr-12" to="/"></Link>
-        <Link className="mr-12" to="/"></Link>
+        <Link className="mr-12" to="/">Residential development is real estate development for residential purposes. Some such developments are called a subdivision, when the land is divided into lots with houses constructed on each lot. </Link>
+        <Link className="mr-12" to="/">Residential development is real estate development for residential purposes. Some such developments are called a subdivision, when the land is divided into lots with houses constructed on each lot. </Link>
+        <Link className="mr-12" to="/">Residential development is real estate development for residential purposes. Some such developments are called a subdivision, when the land is divided into lots with houses constructed on each lot.  </Link>
         </Marquee>
                 </div>
             

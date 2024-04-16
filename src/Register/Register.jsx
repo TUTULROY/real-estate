@@ -3,6 +3,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -39,7 +40,9 @@ const Register = () => {
     return (
 
         <div>
-       
+       <Helmet>
+        <title>Register Page</title>
+       </Helmet>
 <div>
 <h2 className="text-2xl my-10 text-center">Please Register</h2>
 

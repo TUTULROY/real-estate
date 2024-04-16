@@ -13,6 +13,7 @@ const UserProfile = () => {
             <h2 className="text-2xl my-10 ">Profile Information</h2>
            
                 <form className="card-body md:w-3/4 lg:w-1/2 mx-auto">
+                    <img src={user.photoURL} alt="" />
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Name</span>
@@ -39,7 +40,7 @@ const UserProfile = () => {
                             
                         />
                     </div>
-                    <div className="form-control">
+                    {/* <div className="form-control">
                         <label className="label">
                             <span className="label-text">Photo URL</span>
                         </label>
@@ -51,7 +52,7 @@ const UserProfile = () => {
                             readOnly
                             
                         />
-                    </div>
+                    </div> */}
                 </form>
              
   

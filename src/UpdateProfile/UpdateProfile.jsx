@@ -24,7 +24,7 @@ const UpdateProfile = () => {
         
         updateUserProfile(fullName, image)
             .then(() => {
-               setLoading(true)
+                setLoading(true)
                 navigate(form);
             })
             .catch(error => {
@@ -36,6 +36,7 @@ const UpdateProfile = () => {
         <div>
             <h2 className="text-2xl my-10 text-center">Edit Profile</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="card-body md:w-3/4 lg:w-1/2 mx-auto">
+                <img className="max-w-90" src={user.photoURL} alt="" />
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Your Name</span>

@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -35,7 +36,9 @@ const onSubmit = (data) => {
   
     return (
         <div>
-           
+           <Helmet>
+            <title>Login</title>
+           </Helmet>
            <div>
            <h3 className="text-2xl my-8 text-center">Please Login</h3>
             <form onSubmit={handleSubmit(onSubmit)} className="card-body md:w-3/4 lg:w-1/2 mx-auto">
