@@ -17,7 +17,7 @@ const Home = () => {
         
         <div>
             <Helmet>
-        <title>T.R Estate || Home</title>
+        <title>Home T.R Estate</title>
         
       </Helmet>
             <div className="mt-7 animate__animated animate__swing animate__delay-2s">

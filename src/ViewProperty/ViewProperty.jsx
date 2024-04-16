@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useParams, useLoaderData } from "react-router-dom";
 
 
@@ -6,9 +7,12 @@ const ViewProperty = () => {
     const propertys = useLoaderData();
     const property = propertys.find(property => property.id === id)
 
-    
+
     return (
         <div>
+            <Helmet>
+            <title>View Property:{id}</title>
+          </Helmet>
             <h2 className="text-center text-2xl font-semibold my-5">View Property</h2>
            <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row">

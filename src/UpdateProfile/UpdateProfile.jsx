@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { useForm } from "react-hook-form";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
     const { user, updateUserProfile, setLoading } = useAuth();
@@ -34,6 +35,9 @@ const UpdateProfile = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>UpDateProfile</title>
+            </Helmet>
             <h2 className="text-2xl my-10 text-center">Edit Profile</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="card-body md:w-3/4 lg:w-1/2 mx-auto">
                 <img className="max-w-90" src={user.photoURL} alt="" />

@@ -1,4 +1,5 @@
 // import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import useAuth from "../hooks/useAuth";
 
 
@@ -9,6 +10,9 @@ const UserProfile = () => {
 
     return (
         <div className="text-center" >
+            <Helmet>
+                <title>User Profile</title>
+            </Helmet>
           
             <h2 className="text-2xl my-10 ">Profile Information</h2>
            
