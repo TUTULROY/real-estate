@@ -1,6 +1,6 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../SocialLogin/SocialLogin";
@@ -9,6 +9,8 @@ import { Helmet } from "react-helmet-async";
 
 const Login = () => {
 const {signIn} = useContext(AuthContext)
+const [error, setError] = useState(null);
+
 
 const {
   register,
@@ -27,9 +29,14 @@ const onSubmit = (data) => {
   signIn(email, password)
   .then(result =>{
     if(result.user){
+      
         navigate(from);
     }
+    
 })
+.catch(
+  setError("Invalid email or password")
+);
   
 }
 
@@ -49,20 +56,24 @@ const onSubmit = (data) => {
           <input type="email" name="email" placeholder="email" className="input input-bordered" 
           {...register("email", { required: true })}
           />
-          {errors.email && <span>This field is required</span>}
+          {errors.email && <span className="text-red-500">This field is required</span>}
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
           <input type="password" name="password" placeholder="password" className="input input-bordered" {...register("password", { required: true })} />
-          {errors.password && <span>This field is required</span>}  
+          {errors.password && <span className="text-red-500">This field is required</span>}  
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
+          {
+          error && <span className="text-red-500">{error}</span>
+          
+          }
         </div>
       </form>
       <SocialLogin></SocialLogin>

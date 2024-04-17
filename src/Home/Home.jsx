@@ -5,6 +5,10 @@ import Propertys from "../Propertys/Propertys";
 import 'animate.css';
 import Marquee from "react-fast-marquee";
 import { Helmet } from "react-helmet-async";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 
@@ -20,7 +24,7 @@ const Home = () => {
         <title>Home T.R Estate</title>
         
       </Helmet>
-            <div className="mt-7 animate__animated animate__swing animate__delay-2s">
+            <div data-aos="zoom-in" className="mt-7 animate__animated animate__delay-5s">
             <Banner></Banner>
             
             </div>
@@ -34,7 +38,7 @@ const Home = () => {
                 </div>
             
             
-            <div className="lg:grid grid-cols-2 mx-auto animate__animated animate__swing animate__delay-5s">
+            <div data-aos="fade-up" className="lg:grid grid-cols-2 mx-auto animate__animated  animate__delay-5s">
             
                 {
                     property.map(propertys => <Propertys  
