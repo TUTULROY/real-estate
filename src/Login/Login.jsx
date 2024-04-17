@@ -1,15 +1,18 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import { Helmet } from "react-helmet-async";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const Login = () => {
 const {signIn} = useContext(AuthContext)
-const [error, setError] = useState(null);
+// const [error, setError] = useState(null);
 
 
 const {
@@ -26,17 +29,29 @@ const navigate = useNavigate();
 const onSubmit = (data) => {
   
   const {email, password} = data;
+
+
   signIn(email, password)
-  .then(result =>{
-    if(result.user){
+//   .then(result =>{
+//     toast.success("LogIn successful");
+//     if(result.user){
       
-        navigate(from);
-    }
-    
+//         navigate(from);
+//     }
+  
+// })
+.then(result => {
+  console.log("Login Result:", result); // Log the result for debugging
+  toast.success("Login successful");
+  if (result.user) {
+    navigate(from);
+  }
 })
-.catch(
-  setError("Invalid email or password")
-);
+.catch(error => {
+  console.error(error);
+  toast.error('Invalid email or password.');
+})
+
   
 }
 
@@ -70,15 +85,16 @@ const onSubmit = (data) => {
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
-          {
+          {/* {
           error && <span className="text-red-500">{error}</span>
           
-          }
+          } */}
         </div>
       </form>
       <SocialLogin></SocialLogin>
       <p className="text-center mt-2">Do not have an account <Link className="text-blue-500  font-bold" to="/register">Register</Link></p>
            </div>
+           <ToastContainer></ToastContainer>
         </div>
     );
 };

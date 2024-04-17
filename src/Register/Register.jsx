@@ -4,11 +4,12 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet-async";
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const Register = () => {
 
-    const {createUser, updateUserProfile}  = useContext(AuthContext);
+    const {createUser, updateUserProfile , setLoading}  = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
 
     const {
@@ -27,10 +28,12 @@ const Register = () => {
         const {email, password, fullName, image} = data;
         createUser(email, password)
         .then(() =>{
+          toast.success('Registration successful');
             updateUserProfile(fullName, image)
             .then(() =>{
-              
+              setLoading(true)
                 navigate(from);
+                
             })      
             
         })
@@ -106,7 +109,7 @@ const Register = () => {
     
     <p className="text-center mt-2">Already have an account <Link className="text-blue-500  font-bold" to="/login">Login</Link></p>
 </div>
-
+<ToastContainer></ToastContainer>
   </div>
 
     );

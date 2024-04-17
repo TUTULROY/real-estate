@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet-async';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Agents = ({agents}) => {
     const {agent_name,image, email, phone, type} = agents;
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div data-aos="zoom-out-right" className="card w-96 bg-base-100 shadow-xl">
             <Helmet>
         <title>Agent</title>
        

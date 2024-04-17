@@ -31,6 +31,6 @@ Check out the live site [here](#).
 
 ## NPM Package Used:
 
-- `Swiper slider`: Used for banner section.
-- `React-Hook-Form`: Used for form handling and validation.
-- `Animate.CSS`: Animate.css provides a variety of animations.
+- `Swiper slider Package`: Used for banner section.
+- `React-Hook-Form Package`: Used for form handling and validation.
+-`AOS Package`:This package is a popular library for animating elements as they scroll into view.
